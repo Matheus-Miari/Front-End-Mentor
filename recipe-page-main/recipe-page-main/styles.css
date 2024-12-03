@@ -1,0 +1,158 @@
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+    --primary-color: hsl(14, 45%, 36%);
+    --secondary-color: hsl(332, 51%, 32%);
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --light-background: hsl(30, 54%, 90%);
+    --light-gray: hsl(30, 18%, 87%);
+    --soft-brown: hsl(30, 10%, 34%);
+    --dark-gray: hsl(24, 5%, 18%);
+}
+
+/* Estilo geral da página */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--light-background);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    background-color: var(--white);
+    padding: 2rem;
+    max-width: 50rem;
+    border-radius: 1rem;
+    margin: auto;
+}
+
+/* Imagem da receita */
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos de texto principais */
+.title {
+    font-family: 'Young Serif', serif;
+    color: var(--dark-gray);
+    margin-top: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.paragraph {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--soft-brown);
+}
+
+/* Seções de tempo e preparo */
+.preparation-section,
+.ingredients,
+.instructions {
+    margin-top: 1.5rem;
+    background-color: var(--rose-white);
+    padding: 2rem;
+    border-radius: 0.6rem;
+}
+
+/* Estilizando títulos */
+.preparation-section h3,
+.ingredients h2,
+.instructions h2,
+.nutrition-section h2 {
+    letter-spacing: 0.3rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Listas */
+ul li,
+ol li {
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    list-style: inside;
+}
+
+li::marker {
+    color: var(--primary-color);
+}
+
+/* Negrito em itens importantes */
+.preparation-section li span,
+.instructions li span {
+    font-weight: bold;
+}
+
+/* Informações nutricionais */
+.nutrition-section {
+    margin-top: 2rem;
+    background-color: var(--rose-white);
+    padding: 1.5rem;
+    border-radius: 0.6rem;
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    margin-top: 1rem;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.table th {
+    color: var(--primary-color);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 375px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .paragraph {
+        font-weight: normal;
+    }
+}
+
+/* Rodapé */
+.attribution {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+}
+
+.attribution a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
